@@ -5,10 +5,16 @@
   color: white;
   text-align: justify;
 }
-
+#content2 {
+    margin-left:auto;
+    margin-right: auto;
+    width: 650px;
+    color: black;
+    text-align: justify;
+}
 #greeting-container {
   margin-top: 20px;
-  color:white
+  color:black
 }
 .button {
   border: none;
