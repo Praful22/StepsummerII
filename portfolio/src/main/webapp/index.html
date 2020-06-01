@@ -1,24 +1,10 @@
 <!DOCTYPE html>
 <html>
-   
   <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
   </head>
-   <style>
-      body{
-          background-image: url("images/wallpaper.gif");
-          background-color: #595959;
-          background-attachment: fixed;
-          height: 500px;
-          background-position: 50% 50%;
-          background-size: cover;
-          position: relative;
-      }
-
-    </style>
   <body>
     <div id="content">
       <h1>My Portfolio</h1>
@@ -52,11 +38,11 @@
            of his laptop trying to understand how to write a Javascript 
            function as a part of his internship.</p>
         <p> Wait, I forget to introduce myself. Try any one of them and I will open up to you!</p>
-        <a class="button button1" href="aboutme.html"">About me</a> 
-        <button class="button button2">Travel and Food</button>
-        <button class="button button3">My Projects</button>
-        <button class="button button4">Books</button>
-        <button class="button button5"> My Blog</button>
+        <button onclick="window.location.href='aboutme.html';" value="About me"/>
+        <button onclick="window.location.href='blogs.html';" value="My Blog"/>
+        <button onclick="window.location.href='travel.html';" value="Travel and Food"/>
+        <button onclick="window.location.href='books.html';" value="Books"/>
+        <button onclick="window.location.href='projects.html';" value="My Projects"/>        
     </div>
   </body>
 </html>

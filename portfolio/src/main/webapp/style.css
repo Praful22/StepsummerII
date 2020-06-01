@@ -6,10 +6,21 @@
   text-align: justify;
 }
 
+body{
+    background-image: url("images/wallpaper.gif");
+    background-color: #595959;
+    background-attachment: fixed;
+    height: 500px;
+    background-position: 50% 50%;
+    background-size: cover;
+    position: relative;
+}
+
 #greeting-container {
   margin-top: 20px;
   color:white
 }
+
 .button {
   border: none;
   color: black;
@@ -21,8 +32,22 @@
   margin: 4px 2px;
   cursor: pointer;
 }
-.button1 {background-color: #4CAF50;} /* Green */
+
+.button1 {
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    background-color: #4CAF50;} /* Green */
+
 .button2 {background-color: #008CBA;} /* Blue */
+
 .button3 {background-color: #ffff00;} /* Yellow */
-.button4 {background-color: #00ff00;} /*Lime*/
-.button5 {background-color: #ff00ff;}/*Fuchsia*/
+
+.button4 {background-color: #ff0;} /*Lime*/
+
+.button5 {background-color: #f0f;}/*Fuchsia*/
