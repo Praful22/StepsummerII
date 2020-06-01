@@ -5,6 +5,27 @@
   color: white;
   text-align: justify;
 }
+body1{
+    background-color: #00000;
+    background-image: url("images/Kathmandu.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    height: 500px;
+    background-position: 50% 50%;
+    background-size: cover;
+    position: relative;
+}
+
+body{
+    background-image: url("images/wallpaper.gif");
+    background-color: #595959;
+    background-attachment: fixed;
+    height: 500px;
+    background-position: 50% 50%;
+    background-size: cover;
+    position: relative;
+}
+
 #content2 {
     margin-left:auto;
     margin-right: auto;
