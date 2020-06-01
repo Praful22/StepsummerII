@@ -1,53 +1,90 @@
 #content {
+  color: white;  
   margin-left: auto;
   margin-right: auto;
-  width: 700px;
-  color: white;
   text-align: justify;
+  width: 700px;
+
 }
 
 body{
-    background-image: url("images/wallpaper.gif");
-    background-color: #595959;
-    background-attachment: fixed;
-    height: 500px;
-    background-position: 50% 50%;
-    background-size: cover;
-    position: relative;
+  background-image: url("images/wallpaper.gif");
+  background-color: #595959;
+  background-attachment: fixed;
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 500px;
+  position: relative;
 }
 
 #greeting-container {
+  color:white;
   margin-top: 20px;
-  color:white
 }
 
-.button {
+button {
   border: none;
   color: black;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
+  cursor: pointer;
   display: inline-block;
   font-size: 16px;
   margin: 4px 2px;
-  cursor: pointer;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
 }
 
-.button1 {
-    border: none;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    background-color: #4CAF50;} /* Green */
+button1 {
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+} 
 
-.button2 {background-color: #008CBA;} /* Blue */
+button2 {
+  border: none;
+  cursor: pointer;
+  display: inline-block;  
+  font-size: 16px;
+  margin: 4px 2px; 
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+} 
 
-.button3 {background-color: #ffff00;} /* Yellow */
+button3 {
+  border: none;  
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none; 
+} 
 
-.button4 {background-color: #ff0;} /*Lime*/
+button4 {
+  border: none;  
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  padding: 15px 32px;
+  margin: 4px 2px;
+  text-align: center;
+  text-decoration: none;
+} 
 
-.button5 {background-color: #f0f;}/*Fuchsia*/
+button5 {
+  border: none;
+  cursor: pointer;  
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+}
