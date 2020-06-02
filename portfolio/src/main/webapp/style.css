@@ -1,11 +1,12 @@
 #content {
+  color: white;
   margin-left: auto;
   margin-right: auto;
-  width: 700px;
-  color: white;
   text-align: justify;
+  width: 700px;
 }
-body1{
+
+body#body1 {
     background-color:white;
     background-image: url("images/Kathmandu.jpg");
     background-attachment: fixed;
@@ -37,6 +38,7 @@ body{
   margin-top: 20px;
   color:black
 }
+
 .button {
   border: none;
   color: black;
@@ -48,8 +50,23 @@ body{
   margin: 4px 2px;
   cursor: pointer;
 }
+
 .button1 {background-color: #4CAF50;} /* Green */
 .button2 {background-color: #008CBA;} /* Blue */
 .button3 {background-color: #ffff00;} /* Yellow */
 .button4 {background-color: #00ff00;} /*Lime*/
 .button5 {background-color: #ff00ff;} /*Fuchsia*/
+
+div.polaroid {
+  width: 256px;
+  height: 256px;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 20px;
+}
+
+div.container {
+  text-align: center;
+  color: white;
+  padding: 1px 2px;
+}
