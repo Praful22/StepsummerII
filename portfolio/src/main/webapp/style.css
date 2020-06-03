@@ -1,9 +1,35 @@
 #content {
+  color: white;  
   margin-left: auto;
   margin-right: auto;
-  width: 650px;
+  text-align: justify;
+  width: 700px;
+
+}
+
+body {
+  background-image: url("images/wallpaper.gif");
+  background-color: #595959;
+  background-attachment: fixed;
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 500px;
+  position: relative;
 }
 
 #greeting-container {
+  color:white;
   margin-top: 20px;
+}
+
+button {
+  border: none;
+  color: black;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
 }
