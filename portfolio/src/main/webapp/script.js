@@ -26,3 +26,8 @@ function addRandomGreeting() {
   const greetingContainer = document.querySelector('#greeting-container');
   greetingContainer.innerText = greeting;
 }
+function getRandomQuoteUsingArrowFunctions() {
+  fetch('/data').then(response => response.text()).then((quote) => {
+    document.getElementById('fun_fact').innerText = quote;
+  });
+}
