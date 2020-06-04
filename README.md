@@ -1,6 +1,6 @@
 # Google Student Training in Engineering Program
 
-This repo contain Praful's portfolio and STEP projects.
+This repo contains Praful's portfolio and STEP projects.
 This work is based on the [Google Software Product Sprint](https://g.co/softwareproductsprint) program.
 
 To get started:
