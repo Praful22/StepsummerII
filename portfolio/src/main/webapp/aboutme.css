@@ -1,0 +1,32 @@
+#body { 
+  background-color:white;
+  background-image: url("images/Kathmandu.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 500px;
+  position: relative;
+}
+
+#content {
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: justify;
+  width: 800px;
+}
+
+#polaroid {
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  height: 256px;
+  margin-bottom: 20px;
+  width: 256px;
+}
+
+#container {
+  color: white;
+  padding: 1px 2px;
+  text-align: right;
+}
