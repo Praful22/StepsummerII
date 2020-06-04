@@ -1,13 +1,4 @@
-#content {
-  color: white;  
-  margin-left: auto;
-  margin-right: auto;
-  text-align: justify;
-  width: 700px;
-
-}
-
-body{
+body {
   background-image: url("images/wallpaper.gif");
   background-color: #595959;
   background-attachment: fixed;
@@ -17,14 +8,9 @@ body{
   position: relative;
 }
 
-#greeting-container {
-  color:white;
-  margin-top: 20px;
-}
-
 button {
-  border: none;
-  color: black;
+  background-color: transparent;
+  color:white;
   cursor: pointer;
   display: inline-block;
   font-size: 16px;
@@ -32,4 +18,17 @@ button {
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
+}
+
+#content {
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: justify;
+  width: 900px;
+}
+
+#greeting-container {
+  color:white;
+  margin-top: 20px;
 }
