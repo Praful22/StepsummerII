@@ -17,14 +17,7 @@
  * Adds a random greeting to the page.	 * Adds a fun fact to the page.
  */	
 function getRandomQuoteUsingArrowFunctions() {
-  const greetings = fetch('/data').then(response => response.text()).then((message) => 
-  {document.getElementById('fun-fact').innerText = message;
-=======
- * Adds a fun fact to the page.
- */
-function getRandomQuoteUsingArrowFunctions() {
   fetch('/data').then(response => response.text()).then((message) => {
     document.getElementById('fun-fact').innerText = message;
->>>>>>> 24076e60ed273355ddb74171b9c9ac227eeee113
   });
 }
