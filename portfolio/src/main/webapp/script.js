@@ -15,7 +15,8 @@
 /**
  * Adds a random greeting to the page.	 * Adds a fun fact to the page.
  */	
-function addRandomGreeting() {	function getRandomQuoteUsingArrowFunctions() {
-  const greetings =	  fetch('/data').then(response => response.text()).then((message) => 
+function getRandomQuoteUsingArrowFunctions() {
+  const greetings = fetch('/data').then(response => response.text()).then((message) => 
   {document.getElementById('fun-fact').innerText = message;
   });
+}
