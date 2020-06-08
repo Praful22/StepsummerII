@@ -12,9 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-/**
-<<<<<<< HEAD
- * Adds a random greeting to the page.	 * Adds a fun fact to the page.
+/*
+ Adds a fun fact to the page.
  */	
 function getRandomQuoteUsingArrowFunctions() {
   fetch('/data').then(response => response.text()).then((message) => {
