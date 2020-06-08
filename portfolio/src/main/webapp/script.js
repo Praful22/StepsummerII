@@ -18,6 +18,6 @@
  */	
 function getRandomQuoteUsingArrowFunctions() {
   fetch('/data').then(response => response.text()).then((message) => {
-    document.getElementById('fun-fact').innerText = message;
+    document.querySelector('fun-fact').innerText = JSON.parse(message);
   });
 }
