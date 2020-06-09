@@ -14,7 +14,7 @@
 
 /*
  Adds a fun fact to the page.
- */	
+ */
 function getRandomQuoteUsingArrowFunctions() {
   fetch('/fact').then(response => response.text()).then((message) => {
     document.querySelector('#fun-fact').innerText = JSON.parse(message);
