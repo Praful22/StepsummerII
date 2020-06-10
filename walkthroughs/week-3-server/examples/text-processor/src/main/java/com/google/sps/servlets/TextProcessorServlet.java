@@ -21,7 +21,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/* Servlet that processes text. */
+/** Servlet that processes text. */
 @WebServlet("/text")
 public final class TextProcessorServlet extends HttpServlet {
 
