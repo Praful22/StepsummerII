@@ -13,21 +13,33 @@
 
 package com.google.sps.servlets;
 
+import com.google.gson.Gson;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /** Servlet that returns a fun fact about me.*/
-@WebServlet("/data")
-public class DataServlet extends HttpServlet {
+@WebServlet("/fact")
+public class FactServlet extends HttpServlet {
+    
+  private List<String> funFacts;
+
+  @Override
+  public void init() {
+    funFacts = new ArrayList<>();
+    funFacts.add("I play three musical instruments.");
+    funFacts.add("I've travelled to five countries in three different continents.");
+    funFacts.add("I've launched a solid motored rocket which reached around 200 ft high.");
+  }
 
   @Override
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-    String message = "I've been to a mountain's base camp situated at 16000 ft. high.";
-    
-    response.setContentType("text/html;");
-    response.getWriter().println(message);
+    String json = new Gson().toJson(funFacts);
+    response.setContentType("text/html");
+    response.getWriter().println(json);
   }
 }
