@@ -23,7 +23,11 @@
       <version>4.0.1</version>
       <scope>provided</scope>
     </dependency>
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> e4cefb175acae9a77eea4307f20f584c5597c3d8
     <dependency>
       <groupId>com.google.code.gson</groupId>
       <artifactId>gson</artifactId>
