@@ -39,7 +39,7 @@ public class FactServlet extends HttpServlet {
   @Override
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
     String json = new Gson().toJson(funFacts);
-    response.setContentType("text/html;");
+    response.setContentType("text/html");
     response.getWriter().println(json);
   }
 }
