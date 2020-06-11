@@ -16,7 +16,6 @@ public class CommentServlet extends HttpServlet {
   
   @Override
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-    
     response.setContentType("application/json");
     String json = new Gson().toJson(formComments);
     response.getWriter().println(json);
@@ -31,4 +30,3 @@ public class CommentServlet extends HttpServlet {
     response.sendRedirect("/index.html");
   }
 }
-
