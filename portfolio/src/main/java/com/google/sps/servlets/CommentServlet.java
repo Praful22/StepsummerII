@@ -23,7 +23,6 @@ public class CommentServlet extends HttpServlet {
 
   @Override
   public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
-
     String userComment = request.getParameter("comment-input");
     formComments.add(userComment);
     // Redirect back to the HTML page.
