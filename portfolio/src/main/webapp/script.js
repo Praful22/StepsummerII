@@ -20,3 +20,18 @@ function getRandomQuoteUsingArrowFunctions() {
     document.querySelector('#fun-fact').innerText = JSON.parse(message);
   });
 }
+/**
+  *Fetches comments as a list.  
+  */
+function getCommentsUsingArrowFunctions() {
+  const commentContainer = document.querySelector('#comments');
+  fetch('/comments')
+      .then(response => response.json())
+      .then(formComments => {
+        formComments.forEach(commentText => {
+        const comment = document.createElement("li");
+        comment.innerText = commentText;
+        commentContainer.appendChild(comment);
+      });
+  });
+}
