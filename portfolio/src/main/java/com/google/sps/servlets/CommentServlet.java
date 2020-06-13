@@ -28,7 +28,7 @@ public class CommentServlet extends HttpServlet {
     List<Comment> formComments = new ArrayList<>();
     for (Entity entity : results.asIterable()) {
       long id = entity.getKey().getId();
-      String commentText = (String) entity.getProperty("Comment");
+      String commentText = (String) entity.getProperty("comment");
       long timestamp = (long) entity.getProperty("timestamp");
       Comment comment = new Comment(id, commentText, timestamp);
       formComments.add(comment);
@@ -44,7 +44,7 @@ public class CommentServlet extends HttpServlet {
     Entity commentEntity = new Entity("Comments");
     long timestamp = System.currentTimeMillis();
 
-    commentEntity.setProperty("Comment", userComment);
+    commentEntity.setProperty("comment", userComment);
     commentEntity.setProperty("timestamp", timestamp);
 
     DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
