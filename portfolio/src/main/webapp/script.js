@@ -26,12 +26,12 @@ function getRandomQuoteUsingArrowFunctions() {
 function getCommentsUsingArrowFunctions() {
   const commentContainer = document.querySelector('#comments');
   fetch('/comments')
-      .then(response => response.json())
-      .then(formComments => {
-        formComments.forEach(commentText => {
-        const comment = document.createElement("li");
-        comment.innerText = commentText;
-        commentContainer.appendChild(comment);
+    .then(response => response.json())
+    .then(formComments => {
+      formComments.forEach(comment => {
+        const commentList = document.createElement("li");
+        commentList.innerText = comment.commentText;
+        commentContainer.appendChild(commentList);
       });
   });
 }
