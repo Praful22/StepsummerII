@@ -29,7 +29,7 @@ function getCommentsUsingArrowFunctions() {
     .then(response => response.json())
     .then(formComments => {
       formComments.forEach(comment => {
-        const commentList = document.createElement("li");      
+        const commentList = document.createElement("li");
         commentList.innerText = comment.commentText;
         commentContainer.appendChild(commentList);
       });
