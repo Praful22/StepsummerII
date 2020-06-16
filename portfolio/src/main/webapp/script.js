@@ -39,5 +39,21 @@ function getCommentsUsingArrowFunctions() {
 function createMap() {
   const map = new google.maps.Map(
       document.querySelector('#map'),
-      {center: {lat: 37.422, lng: -122.084}, zoom: 16});
+      {center: {lat: 27.690736, lng: 85.292782}, zoom: 5});
+    
+  const hagiasophiaMarker = new google.maps.Marker({
+      position: {lat:41.008469, lng:28.980261},
+      map: map,
+      title:'Hagia Sophia'
+  })
+
+  const londonMarker = new google.maps.Marker({
+      position: {lat:51.503323, lng:-0.119543},
+      map:map, title:'London'
+  })
+
+  const chandigarhMarker = new google.maps.Marker({
+      position: {lat:30.733315, lng:76.779419},
+      map:map, title:'chandigarh'
+  })
 }
