@@ -35,25 +35,60 @@ function getCommentsUsingArrowFunctions() {
       });
   });
 }
-/** Creates a map and adds it to the page. */
+/** Creates a map and adds it to the page. 
 function createMap() {
   const map = new google.maps.Map(
       document.querySelector('#map'),
-      {center: {lat: 27.690736, lng: 85.292782}, zoom: 5});
+      {center: {lat: 0.00000, lng: 0.00000}, zoom: 5});
     
   const hagiasophiaMarker = new google.maps.Marker({
       position: {lat:41.008469, lng:28.980261},
       map: map,
       title:'Hagia Sophia'
   })
-
+  const trexMarker = new google.maps.Marker({
+    position: {lat: 37.421903, lng: -122.084674},
+    map: map,
+    title: 'Stan the T-Rex'
+  })
   const londonMarker = new google.maps.Marker({
       position: {lat:51.503323, lng:-0.119543},
-      map:map, title:'London'
+      map:map, 
+      title:'London'
   })
-
   const chandigarhMarker = new google.maps.Marker({
       position: {lat:30.733315, lng:76.779419},
-      map:map, title:'chandigarh'
-  })
-}
+      map:map, 
+      title:'Chandigarh'
+  })*/
+function createMap() {
+  const locations = [
+      ['Hagia Sophia', 41.008469, 28.980261],
+      ['Stan the T-Rex', 37.421903, -122.084674],
+      ['London', 51.503323, -0.119543],
+      ['Chandigarh', 30.733315, 76.779419],
+      ['Liandudno', 53.326540, -3.834460]
+    ];
+  const map = new google.maps.Map(document.querySelector('#map'), {
+    zoom: 1.5,
+    center: new google.maps.LatLng(0.00000, 0.00000),
+    mapTypeId: google.maps.MapTypeId.TERRAIN
+  });
+
+  const infowindow = new google.maps.InfoWindow();
+
+  var marker, i;
+  
+  for (i = 0; i < locations.length; i++) {  
+    marker = new google.maps.Marker({
+      position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+      map: map
+      });
+    google.maps.event.addListener(marker, 'click', (function(marker, i) {
+      return function() {
+      infowindow.setContent(locations[i][0]);
+      infowindow.open(map, marker);
+      }
+      })(marker, i));
+    }
+ }
