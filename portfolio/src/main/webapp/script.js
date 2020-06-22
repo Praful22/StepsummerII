@@ -51,18 +51,18 @@ function createMap() {
   });
 
   const infowindow = new google.maps.InfoWindow();
-
-  var marker, i;
-  
-  for (i = 0; i < locations.length; i++) {  
-    marker = new google.maps.Marker({
-      position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+  /**
+  Adds marker to the map.
+  */
+  for (const location of locations) {  
+    let marker = new google.maps.Marker({
+      position: new google.maps.LatLng(location[1], location[2]),
       map: map
     });
-    google.maps.event.addListener(marker, 'click', (function(marker, i) {
+    google.maps.event.addListener(marker, 'click', (function(marker, name) {
       return function() {
-        infowindow.setContent(locations[i][0]);
+        infowindow.setContent(name);
         infowindow.open(map, marker);
-    }})(marker, i));
+    }})(marker, location[0]));
   }
  }
