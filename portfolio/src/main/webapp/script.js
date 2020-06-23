@@ -35,3 +35,34 @@ function getCommentsUsingArrowFunctions() {
       });
   });
 }
+
+function createMap() {
+  const locations = [
+    ['Hagia Sophia', 41.008469, 28.980261],
+    ['Stan the T-Rex', 37.421903, -122.084674],
+    ['London', 51.503323, -0.119543],
+    ['Chandigarh', 30.733315, 76.779419],
+    ['Liandudno', 53.326540, -3.834460]
+  ];
+  const map = new google.maps.Map(document.querySelector('#map'), {
+    zoom: 1.5,
+    center: new google.maps.LatLng(0.00000, 0.00000),
+    mapTypeId: google.maps.MapTypeId.TERRAIN
+  });
+
+  const infowindow = new google.maps.InfoWindow();
+  /**
+  Adds marker to the map.
+  */
+  for (const location of locations) {  
+    let marker = new google.maps.Marker({
+      position: new google.maps.LatLng(location[1], location[2]),
+      map: map
+    });
+    google.maps.event.addListener(marker, 'click', (function(marker, name) {
+      return function() {
+        infowindow.setContent(name);
+        infowindow.open(map, marker);
+    }})(marker, location[0]));
+  }
+ }
