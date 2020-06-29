@@ -37,7 +37,12 @@ public final class FindMeetingQuery {
     
     attendeesWorkTime;
   }
-  
+
+  /**
+   *Returns an arraylist containing time range that works for everyone.
+   * @param timeConflicts The list of conflicting times between the attendees.
+   * @param workingPeriod Duration of meeting in minutes.
+   */
   private ArrayList<TimeRange> getWorkTime(List<TimeRange> timeConflicts, long workingPeriod) {
     ArrayList<TimeRange> workTime = new ArrayList<>();
     Collections.sort(timeConflicts, TimeRange.ORDER_BY_START);
@@ -65,6 +70,11 @@ public final class FindMeetingQuery {
     return workTime;
     }
 
+  /**
+   *Returns a list time range that contains time conflicts.
+   * @param events The collection of events happening.
+   * @param request Meeting request that is to be scheduled for attendees. 
+   */
   private List<TimeRange> getTimeConflicts(Collection<Event> events, MeetingRequest request) {
     List <TimeRange> timeConflicts = new ArrayList<>();
     for (Event event: events) {
