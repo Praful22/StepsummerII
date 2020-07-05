@@ -56,14 +56,13 @@ public final class FindMeetingQuery {
         if (trackMergingConflict < timeConflict.end()) {
           trackMergingConflict = timeConflict.end(); 
         }
-        
         if (trackMergingConflict > timeConflict.end()) {
           workTimeStart = trackMergingConflict;
         } else {
           workTimeStart = timeConflict.end();
         }
     } 
-    if (TimeRange.END_OF_DAY - workTimeStart >= workingPeriod){
+    if (TimeRange.END_OF_DAY - workTimeStart >= workingPeriod) {
       workTime.add(TimeRange.fromStartEnd(workTimeStart, TimeRange.END_OF_DAY, true));
     }
     return workTime;
@@ -78,10 +77,10 @@ public final class FindMeetingQuery {
     List <TimeRange> timeConflicts = new ArrayList<>();
     for (Event event: events) {
       Set<String> eventAttendees = event.getAttendees();
-      if (!Collections.disjoint(eventAttendees, request.getAttendees())){
+      if (!Collections.disjoint(eventAttendees, request.getAttendees())) {
         timeConflicts.add(event.getWhen());
-        }
       }
-    return timeConflicts;
     }
+    return timeConflicts;
+  }
 }
