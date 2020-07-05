@@ -77,10 +77,9 @@ public final class FindMeetingQuery {
     List <TimeRange> timeConflicts = new ArrayList<>();
     for (Event event: events) {
       Set<String> eventAttendees = event.getAttendees();
-      if (!Collections.disjoint(eventAttendees, request.getAttendees()))
-        {
+      if (!Collections.disjoint(eventAttendees, request.getAttendees())) {
         timeConflicts.add(event.getWhen());
-        }
+      }
       }
     return timeConflicts;
     }
