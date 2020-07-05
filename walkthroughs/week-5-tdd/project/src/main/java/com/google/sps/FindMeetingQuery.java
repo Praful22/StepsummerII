@@ -67,7 +67,7 @@ public final class FindMeetingQuery {
       workTime.add(TimeRange.fromStartEnd(workTimeStart, TimeRange.END_OF_DAY, true));
     }
     return workTime;
-    }
+  }
 
   /**
    *Returns a list time range that contains time conflicts.
