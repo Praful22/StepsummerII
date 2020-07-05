@@ -63,8 +63,8 @@ public final class FindMeetingQuery {
           workTimeStart = timeConflict.end();
         }
     } 
-    if (TimeRange.END_OF_DAY - workTimeStart >= workingPeriod){
-        workTime.add(TimeRange.fromStartEnd(workTimeStart, TimeRange.END_OF_DAY, true));
+    if (TimeRange.END_OF_DAY - workTimeStart >= workingPeriod) {
+      workTime.add(TimeRange.fromStartEnd(workTimeStart, TimeRange.END_OF_DAY, true));
     }
     return workTime;
     }
