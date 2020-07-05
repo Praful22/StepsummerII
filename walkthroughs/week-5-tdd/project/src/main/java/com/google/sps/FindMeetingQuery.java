@@ -39,7 +39,7 @@ public final class FindMeetingQuery {
   }
 
   /**
-   *Returns an arraylist containing time range that works for everyone.
+   * Returns an arraylist containing time range that works for everyone.
    * @param timeConflicts The list of conflicting times between the attendees.
    * @param workingPeriod Duration of meeting in minutes.
    */
