@@ -38,7 +38,7 @@ public final class FindMeetingQuery {
   }
 
   /**
-   *Returns an arraylist containing time range that works for everyone.
+   * Returns an arraylist containing time range that works for everyone.
    * @param timeConflicts The list of conflicting times between the attendees.
    * @param workingPeriod Duration of meeting in minutes.
    */
@@ -48,7 +48,7 @@ public final class FindMeetingQuery {
     int workTimeStart = TimeRange.START_OF_DAY;
     int workTimeEnd = 0;
     int trackMergingConflict = 0;
-    for (TimeRange timeConflict: timeConflicts){
+    for (TimeRange timeConflict: timeConflicts) {
         workTimeEnd = timeConflict.start();
         if (workingPeriod <= workTimeEnd - workTimeStart){
           workTime.add(TimeRange.fromStartEnd(workTimeStart, workTimeEnd, false));
@@ -56,18 +56,18 @@ public final class FindMeetingQuery {
         if (trackMergingConflict < timeConflict.end()) {
           trackMergingConflict = timeConflict.end(); 
         }
+        
         if (trackMergingConflict > timeConflict.end()) {
           workTimeStart = trackMergingConflict;
-        }
-        else{
+        } else {
           workTimeStart = timeConflict.end();
         }
     } 
     if (TimeRange.END_OF_DAY - workTimeStart >= workingPeriod){
-        workTime.add(TimeRange.fromStartEnd(workTimeStart, TimeRange.END_OF_DAY, true));
+      workTime.add(TimeRange.fromStartEnd(workTimeStart, TimeRange.END_OF_DAY, true));
     }
     return workTime;
-    }
+  }
 
   /**
    *Returns a list time range that contains time conflicts.
@@ -78,8 +78,7 @@ public final class FindMeetingQuery {
     List <TimeRange> timeConflicts = new ArrayList<>();
     for (Event event: events) {
       Set<String> eventAttendees = event.getAttendees();
-      if (!Collections.disjoint(eventAttendees, request.getAttendees()))
-        {
+      if (!Collections.disjoint(eventAttendees, request.getAttendees())){
         timeConflicts.add(event.getWhen());
         }
       }
