@@ -56,8 +56,7 @@ public final class FindMeetingQuery {
         }
         if (trackMergingConflict < timeConflict.end()) {
           trackMergingConflict = timeConflict.end(); 
-        }
-        if (trackMergingConflict > timeConflict.end()) {
+        } else if (trackMergingConflict > timeConflict.end()) {
           workTimeStart = trackMergingConflict;
         }
         else{
