@@ -26,16 +26,15 @@ import java.util.Set;
 public final class FindMeetingQuery {
   public Collection<TimeRange> query(Collection<Event> events, MeetingRequest request) {
     long workingPeriod = request.getDuration();
-    int totalHours = 24*60;
     // If meeting duration is greater than a day, then meeting cannot happen.
-    if (workingPeriod > TimeRange.WHOLE_DAY.duration()){ return new ArrayList<TimeRange>();}
+    if (workingPeriod > TimeRange.WHOLE_DAY.duration()) return new ArrayList<TimeRange>();
 
     // If no attendees are present, then the meeting can happen at any time of the day.
     if (events.isEmpty()) return Arrays.asList(TimeRange.WHOLE_DAY);
 
     ArrayList<TimeRange> attendeesWorkTime = getWorkTime(getTimeConflicts(events, request), workingPeriod);
     
-    attendeesWorkTime;
+    return attendeesWorkTime;
   }
 
   /**
